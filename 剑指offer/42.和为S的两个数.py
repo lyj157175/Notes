@@ -12,28 +12,19 @@
 
 class Solution:
     def FindNumbersWithSum(self, array, tsum):
+        if array is None:
+            return None
         i, j = 0, len(array)-1
-        val = float('inf')
+        mul = []
         res = []
-        while i < j:
-            if array[i] + array[j] == tsum:
-                if array[i] * array[j] < val:
-                    val = array[i] * array[j]
-                    res.append([array[i], array[j]])
-                    i += 1
+        while i <= j:
+            if array[i] + array[j] == tsum: 
+                mul.append(array[i] * array[j])
+                res.append([array[i], array[j]])
+                i += 1
             elif array[i] + array[j] > tsum:
                 j -= 1
             else:
                 i += 1
-        return res[-1]
-
-                
-
-            
-
-
-        
-
-
-
+        return res[mul.index(min(mul))]
 
