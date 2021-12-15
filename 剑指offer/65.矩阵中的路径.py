@@ -23,3 +23,4 @@ class Solution:
     def hasPath(self, matrix, word):
         
         
+        
