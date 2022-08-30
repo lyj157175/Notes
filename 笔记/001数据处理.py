@@ -1,3 +1,4 @@
+# -------------------- csv文件的读写 ---------------------------
 import pandas as pd
 
 file_path = '一级市场公司标的归一词.xlsx'
@@ -18,6 +19,5 @@ for id in data.index.values :
     line = data.loc[id].values
     print(id)
     print(line)
-
 
 
