@@ -102,3 +102,11 @@ c = torch.zeros(3, 3)
 
 
 
+
+import torch
+
+a = torch.tensor([[1,2],[3,4]])
+b = torch.tensor([[1,1],[1,1]])
+
+print(a * b)    # 矩阵相乘
+print(a.matmul(b))   # 矩阵点积 dot-product

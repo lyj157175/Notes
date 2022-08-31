@@ -1,7 +1,7 @@
-# -------------------- csv文件的读写 ---------------------------
+# -------------------- csv文件的读入 ---------------------------
 import pandas as pd
 
-file_path = '一级市场公司标的归一词.xlsx'
+file_path = '公司标的.xlsx'
 data = pd.read_excel(file_path)
 
 ### ------------------- pandas的test ---------------------------
@@ -21,3 +21,10 @@ for id in data.index.values :
     print(line)
 
 
+# ---------------------------  数据的写入 ------------------------------------
+import pandas as pd
+data = []
+
+header = ['content']
+dt = pd.DataFrame(data, columns=header)
+dt.to_excel("news_test.xlsx", index=0, sheet_name='event')   # 可以用for遍历来指定sheet_name
