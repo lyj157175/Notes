@@ -67,3 +67,11 @@ db.close()
 # )
 # conn = pool.connection()
 # cursor = conn.cursor()
+
+
+
+
+
+# ----------------------------- mysql语法 ----------------------------------------------
+# join语法
+sql = 'select * from table_a, table_b where table_a.id = table_b.id'

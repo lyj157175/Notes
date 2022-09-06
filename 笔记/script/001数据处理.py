@@ -3,6 +3,8 @@ import pandas as pd
 
 file_path = '公司标的.xlsx'
 data = pd.read_excel(file_path)
+# data = pd.read_excel(file_path, encoding='utf-8')
+
 
 ### ------------------- pandas的test ---------------------------
 # print(data)    # 打印全表
