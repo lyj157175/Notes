@@ -63,11 +63,12 @@ class MyBert(BertPreTrainedModel):
 
 
 if __name__ == "__main__":
-    model_path = 'data/uie_base_pytorch'    # 模型名字
+    model_path = '../../bert-base-chinese'    # 模型名字
     tokenizer = BertTokenizerFast.from_pretrained(model_path)
     model = BertModel.from_pretrained(model_path)
     # print(model)
 
     my_bert = MyBert.from_pretrained(model_path)
     print(my_bert.hidden_size)
-
+    x = torch.ones(3,3)
+    out = my_bert(x)

@@ -75,3 +75,7 @@ db.close()
 # ----------------------------- mysql语法 ----------------------------------------------
 # join语法
 sql = 'select * from table_a, table_b where table_a.id = table_b.id'
+
+
+# 查看mysql的子查询
+# sql = 'select content from news_realtime where item_id in (select news_id from news_data where event_id = "fdfzozbeaqtrpqpel60")
