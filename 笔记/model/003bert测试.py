@@ -66,6 +66,22 @@ def test_layer_norm():
 
 
 
+def huggingface_using():
+    encoded_inputs = tokenizer(
+        text='股东大汇今天召开了',   # [cls] text [sep] text_pair [cls]
+        text_pair='学历',
+        truncation=True,
+        max_length=20,
+        add_special_tokens=True)
+
+    print(encoded_inputs)
+    print(tokenizer.encode('学历'))
+    print(tokenizer.decode([1, 18, 382, 2]))
+
+
+
+
+
 
 
 if __name__ == '__main__':
@@ -80,4 +96,6 @@ if __name__ == '__main__':
     # forward_bert()
 
     # test_layer_norm()
+
+    huggingface_using()
 

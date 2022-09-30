@@ -10,6 +10,7 @@ import urllib3
 import io
 
 
+# pip install pdfminer3k
 
 def PDFparse(url):
     pdf_content = ''
@@ -47,7 +48,15 @@ def PDFparse(url):
 
 
 
+def func2():
+    # pip install pdfplumber==0.5.21
+    import pdfplumber as ppl
 
+    pdf_path = "公告test.pdf"
+    pdf = ppl.open(pdf_path)
+
+    for page in pdf.pages:
+        print(page.extract_text())
 
 
 if __name__ == '__main__':
