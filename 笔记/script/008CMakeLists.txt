@@ -1,0 +1,24 @@
+cmake_minimum_required(VERSION 3.20.2)
+project(test)  # 指定工程名字
+
+set(CMAKE_CXX_STANDARD 14)  # 指定变量
+
+
+### cmake常用变量
+#CMAKE_C_FLAGS   # gcc编译选项
+#CMAKE_CXX_FLAGS  # g++编译选项       # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -o2 -Wall")
+#CMAKE_BUILD_TYPE (Debug, Release)   # set(CMAKE_BUILD_TYPE Release)
+
+# set(src main.cpp demo.cpp)
+# include_directories(./include /user/yuanjie/cpptest)  # 添加多个头文件搜索路径
+# link_directories(./lib /user/yuanjie/cpptest/libdir)  # 添加多个库文件搜索路径
+# add_library(hello shared ${src})   # 生成动静库文件, shared东态库，static静态库
+# add_compile_options(-std=c++111 -o2)  # 添加编译参数
+# add_executable(test main.cpp src/1.cpp src/2.cpp src/3.cpp)  # 添加可执行文件
+# target_link_libraries(test hello)  # 将hello动态库链接到可执行文件test上
+#add_subdirectory(src)    # 添加源文件的子目录,需要确认src下也存放CMakeLists.txt,可以指定目标二进制文件存放位置
+#aux_source_directory(. src) # 发现一个目录下所有的源文件代码并将列表存在一个变量中, 将.下的所有源文件定义为src
+
+add_executable(test main.cpp src/demo.cpp)  #生成可执行文件
+
+

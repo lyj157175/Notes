@@ -7,7 +7,11 @@ def job():
     print("I'm working...")
 
 
-
+def time_format_transform():
+    import datetime
+    a = 1659519959  #int 
+    date_str = datetime.datetime.strftime(datetime.datetime.fromtimestamp(a), "%Y-%m-%d %H:%M:%S")
+    print(date_str)
 
 
 if __name__ == '__main__':
@@ -20,6 +24,8 @@ if __name__ == '__main__':
 
     print('当前时间:', (datetime.datetime.now()).strftime("%Y-%m-%d %H:%M:%S"))
     print('10天前时间', ((datetime.datetime.now()) + datetime.timedelta(days=-10)).strftime("%Y-%m-%d %H:%M:%S"))
+
+
 
     
     while True:
