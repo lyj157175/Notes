@@ -18,3 +18,5 @@ class MyModule(torch.nn.Module):
 # sm.save('mode_jit.pt')
 
 print(torch.__version__)
+
+

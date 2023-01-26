@@ -80,7 +80,12 @@ def huggingface_using():
 
 
 
-
+def test_param(model):
+    decay_params = [
+        p.name for n, p in model.named_parameters()
+        if not any(nd in n for nd in ["bias", "norm"])
+    ]
+    print(decay_params)
 
 
 
@@ -97,5 +102,7 @@ if __name__ == '__main__':
 
     # test_layer_norm()
 
-    huggingface_using()
+    # huggingface_using()
+
+    test_param(model)
 
